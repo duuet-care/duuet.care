@@ -1,0 +1,450 @@
+body {
+   
+            justify-content: center;
+            align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #4d9ef6;
+  }
+  
+  .container, .container-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 100px; /* Adjusted padding for both containers */
+    gap: 0; /* This removes space between the boxes */
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .service-box, .service-box-1 {
+    background-color: #333; /* Dark box background */
+    border-radius: 10px; /* Rounded corners for both types of boxes */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensures the pseudo-element is contained within the box */
+    flex-grow: 1;
+    flex-basis: 0; /* This ensures the size starts from 0 and only grows as needed */
+    min-width: 250px; /* Adjust this value as necessary */
+    display: flex;
+  
+  flex-direction: column; 
+  }
+  .icon-heading-wrapper {
+    display: flex; /* This creates a flex context for direct children, i.e., img and h2 */
+    align-items: center; /* Aligns img and h2 on the same line */
+    margin-bottom: 10px; /* Add some space between the title and the paragraph */
+  }
+  
+  .service-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white for the glow effect */
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: scale(0);
+  }
+  
+  .service-box:hover, .service-box-1:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    z-index: 1;
+  }
+  
+  .service-box:hover::before {
+    transform: scale(1);
+  }
+  
+  .service-box img, .service-box-1 img {
+    width: 30px; /* Adjust as needed */
+    margin-bottom: 0px;
+    margin-right: 10px; 
+  }
+  
+
+  .service-box h2 {
+    display: inline; /* Ensures the heading does not take up the full width */
+    margin: 0;
+    color: #E77944; /* Adjust to match icon color */
+    margin: 3px -2px;
+    font-weight: 600;
+  }
+  .service-box .apple h2 {
+    display: inline; /* Ensures the heading does not take up the full width */
+    margin: 0;
+    color: #5B63DD; /* Adjust to match icon color */
+    margin: 3px -2px;
+    font-weight: 600;
+  }
+
+  
+  .service-box p {
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  /* Center logo and header */
+  #logo, header h1, p.disclaimer {
+    text-align: center;
+  }
+  
+  #logo {
+    padding-top: 70px;
+  }
+  #logo img {
+    width: 70px;
+  }
+
+  .logo-img path {
+    fill: #ffffff;
+  }
+
+  
+  
+  /* Style for disclaimer */
+  p.disclaimer {
+    margin-top: 50px; /* Adjust this value as needed */
+  }
+  iframe {
+    margin-top: 50px; 
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 10px; /* Set border radius for the iframe */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  .feature-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 80px; /* Adjust padding as needed */
+    background-color: #000; /* Dark background */
+    color: #fff; /* Light text */
+  }
+
+  .feature-section  h2{
+    font-size: 30px;
+    color: #6AB6FC; /* Light text */
+  }
+
+
+  .medical-info-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    color: #e5e3e3; /* Text color, adjust as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.6; /* Improves readability */
+}
+
+.medical-info-list li {
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 20px; /* Space for custom bullet */
+    position: relative;
+}
+
+.medical-info-list li:before {
+    content: '•'; /* Custom bullet */
+    color: #dbdbdb; /* Bullet color, adjust as needed */
+    font-size: 20px; /* Bullet size */
+    position: absolute;
+    left: 0;
+}
+
+  
+  .left-column {
+    flex: 1; /* Takes up half the space */
+    padding-right: 40px; /* Adjust spacing as needed */
+    padding-left: 30px;
+  }
+  
+  .right-column {
+    flex: 1; /* Takes up the remaining space */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-gap: 20px; /* Space between grid items */
+    padding-left: 20px; /* Adjust spacing as needed */
+  }
+  .feature-box {
+    background-color: #333; /* Dark box background */
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.icon-title-wrapper {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between icon and heading */
+    margin-bottom: 10px; /* Space between the title wrapper and paragraph */
+}
+
+.feature-box img {
+    width: 50px; /* Icon size */
+    height: auto;
+}
+
+.feature-box h3 {
+    margin: 0; /* Remove margin to avoid extra space */
+    color: #6AB6FC;
+}
+
+.feature-box p {
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+}
+
+  
+  button {
+    padding: 10px 20px; /* Padding inside the buttons */
+    font-size: 18px; /* Font size of the button text */
+    border-radius: 22px; /* Rounded corners for the buttons */
+    border: 1px solid #333; /* Border for the buttons */
+    background-color: transparent; /* Background color of the buttons */
+    cursor: pointer; /* Changes the cursor to indicate these are clickable */
+    outline: none; /* Removes the outline to improve aesthetics */
+    background-color: transparent;
+    border: 2px solid #D45062;
+    transition: background-color 0.3s ease;
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #D45062; /* Button hover state color */
+  }
+  
+  @media (max-width: 768px) {
+    .feature-section {
+      flex-direction: column;
+    }
+  
+    .left-column, .right-column {
+      flex: none;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  
+    .right-column {
+      grid-template-columns: 1fr; /* One column on small screens */
+      grid-gap: 20px;
+    }
+  }
+  
+
+  /* navbar starts */
+.top-nav { 
+    background-color: #000000;
+     width: 100%;
+     height: 70px;
+     overflow: hidden;
+     position: relative;
+    }
+    
+    .top-nav img {
+     padding-top: 20px;
+     padding-left: 5px;
+    }
+    
+    .menu,
+    .menu-close {
+     position: absolute;
+     right: 29px;
+     top: 55%;
+     transform: translateY(-50%);
+     z-index: 100000;
+    }
+    
+    .top-nav .menu {
+     background-color: #F04301;
+     border-radius: 100%;
+     padding: 10px;
+    }
+    
+    .custom-button {
+        color: white; /* Text color inside the button */
+        position: absolute;
+        right: 25px;
+        top: 60%;
+        margin-top: -25px;
+        font-size: 18px;
+        font-weight: 400;
+        height: 45px;
+        line-height: 25px; /* Adjusted to match the height for vertical centering */
+        width: 170px;
+        border-radius: 25px;
+        background-color: transparent;
+        border: 2px solid #D45062;
+        transition: background-color 0.3s ease;
+    }
+    
+    .custom-button:hover {
+        border: 2px solid #CA4587; /* Border color on hover */
+        background: #CA4587; /* Background color on hover */
+        color: white; /* Text color on hover */
+    }
+    
+    
+    .menu-line {
+     width: 18px;
+     height: 2px;
+     padding-left: 5px;
+     padding-right: 5px;
+     background-color: white;
+     margin: 6px 6px;
+    }
+    
+    .menu-close .menu-line {
+     width: 22px;
+     height: 2.5px;
+     background-color: rgb(251, 251, 251);
+    }
+    
+    .menu-close .menu-line:nth-child(1) {
+     transform: rotate(45deg);
+     margin-top: 8px;
+    }
+    
+    .menu-close .menu-line:nth-child(2) {
+     transform: rotate(-45deg);
+     margin-top: -8px;
+    }
+    
+    .menu-panel {
+     width: 400px;
+     right: -400px;
+     height: 100vh;
+     position: fixed;
+     z-index: 10;
+     top: 0px;
+     padding: 70px 0px 50px 0px;
+     -webkit-transition: all 0.6s ease-in-out;
+     transition: all 0.6s ease-in-out;
+     font-size: 2.5em;
+     text-align: center;
+    }
+    
+    .menu-panel.show {
+      right: 0;
+      background: linear-gradient(to bottom,  #9C5929,#923e31,#3F1F23,#252137); 
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.6s ease-in-out;
+    }
+    .menu-links a{
+      font-family: "";
+      justify-content: center;
+      font-size: 1em;
+      font-family: "geominast-regular";
+          font-weight: 400;
+      line-height: 1.75em;
+      color: #e5e5e5;
+      text-decoration: none;
+    }
+    .menu-links a:hover {
+      font-family: "geominast-regular";
+     color: #ffffff;
+     font-weight: 900;
+    }
+    .container-f{
+      margin-left: 8%;
+      margin-right: 6%;
+    }
+    .menu-background {
+     width: 100vw;
+     height: 100vh;
+     top: 0;
+     right: -100vh;
+     transition: all 0.6s ease-in-out;
+     position: fixed;
+     z-index: 10;
+     top: 0px;
+    }
+    
+    .menu-background.show {
+     right: 0px;
+     background-color: rgba(255, 255, 255, 0.7);
+     -webkit-transition: all 0.6s ease-in-out;
+     transition: all 0.6s ease-in-out;
+    }
+    
+    .menu-title {
+    font-weight: 900;
+     margin: 50px 0;
+     font-size: 1.5em;
+     color: #f4f4f4;
+    } 
+  
+    .top-nav .menu,
+  .top-nav .menu-close {
+    z-index: 110001; /* Set a higher z-index value */
+  }
+  
+  .menu-panel,
+  .menu-background {
+    z-index: 909; /* Decrease the z-index value */
+  }
+
+  .button-container {
+    display: flex; /* Uses Flexbox */
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns buttons vertically (useful if they have different heights) */
+    gap: 20px; /* Adds space between the buttons */
+    padding: 50px; /* Optional: Adds some spacing around the buttons */
+}
+
+.custm-button {
+    padding: 10px 20px; /* Padding inside the buttons */
+    font-size: 18px; /* Font size of the button text */
+    border-radius: 22px; /* Rounded corners for the buttons */
+    border: 1px solid #333; /* Border for the buttons */
+    background-color: transparent; /* Background color of the buttons */
+    cursor: pointer; /* Changes the cursor to indicate these are clickable */
+    outline: none; /* Removes the outline to improve aesthetics */
+    background-color: transparent;
+    border: 2px solid #D45062;
+    transition: background-color 0.3s ease;
+}
+
+.custm-button:hover {
+    border: 2px solid #CA4587; /* Border color on hover */
+        background: #CA4587; /* Background color on hover */
+        color: white; /* Text color on hover */
+}
