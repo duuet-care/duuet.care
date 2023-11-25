@@ -448,3 +448,98 @@ body {
         background: #CA4587; /* Background color on hover */
         color: white; /* Text color on hover */
 }
+
+.containery {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.cardy {
+  background-color: #333; /* Dark box background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.cardy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cardy h1 {
+  margin-left:40px;
+  color: #4d9ef6;
+  font-size: 24px;
+}
+.cardy p {
+  margin-left:40px;
+  font-size: 16px;
+  line-height: 1.6; /* Improves readability */
+  flex: 1;
+}
+.cardy img {
+  width: 200px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-left: 270px;
+  margin-right: 100px;
+}
+.buttony {
+  margin-left:40px;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #D45062;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  padding: 10px 20px;
+  
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.buttony:hover {
+  border: 2px solid #CA4587; /* Border color on hover */
+  background: #CA4587; /* Background color on hover */
+  color: white; /* Text color on hover */
+}
+
+
+
+.cardy-1 {
+  background-color: #333; /* Dark box background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.cardy-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cardy-1 h1 {
+
+
+  margin-left:10px;
+  color: #4d9ef6;
+  font-size: 24px;
+}
+.cardy-1 p {
+  margin-right:60px;
+  font-size: 16px;
+  line-height: 1.6; /* Improves readability */
+  flex: 1;
+}
+.cardy-1 img {
+  width: 200px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-left: 70px;
+  margin-right: 170px;
+}
