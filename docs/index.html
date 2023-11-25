@@ -114,6 +114,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script>
+    document.querySelector('.button-container').addEventListener('click', function(event) {
+        if (event.target.classList.contains('custm-button')) {
+            if (event.target.textContent === 'Talk to Duuet') {
+                // Code to handle the Talk to Duuet action
+                window.location.href = 'https://duuet.onrender.com/'; // Replace with your link or action
+            } else if (event.target.textContent === 'Learn how to use') {
+                // Code to handle the Learn how to use action
+                window.location.href = 'use.html'; // Replace with your link or action
+            }
+        }
+    });
+</script>
+
+
+<script>
+
+    
   $(document).ready(function(){
     $('.menu-close').hide();
 
@@ -131,4 +148,11 @@
     });
 });
 </script>
+<script>
+    document.querySelector('.custom-button').addEventListener('click', function() {
+        // Replace the line below with the action you want to perform
+        window.location.href = 'https://duuet.onrender.com/';
+    });
+</script>
+
 </html>
