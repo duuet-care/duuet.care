@@ -9,33 +9,6 @@ body {
     padding: 0;
   }
   
-  nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #4d9ef6;
-  }
   
   .container, .container-1 {
     display: flex;
@@ -119,6 +92,197 @@ body {
   .service-box p {
     font-size: 16px; /* Adjust as needed */
   }
+
+/* ... [Your existing styles] ... */
+
+/* Responsive adjustments */
+
+@media (max-width: 1024px) {
+  .container, .container-1 {
+      padding: 0 50px; /* Reduced padding for medium screens */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: stretch; /* Stretch items to fill the container */
+  }
+  .service-box, .service-box-1 {
+      min-width: 200px; /* Adjust minimum width */
+      margin: 10px auto; /* Center boxes with auto margins */
+      text-align: center; /* Center text within the box */
+  }
+  .service-box img, .service-box-1 img {
+      width: 25px; /* Adjust icon size for medium screens */
+  }
+  /* Ensure the text is visible by setting an appropriate color contrast */
+  .service-box p, .service-box-1 p, .service-box h2, .service-box-1 h2 {
+      color: #FFF; /* Assuming a dark background; adjust as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .container-1 {
+      padding: 0 20px; /* Further reduced padding for small screens */
+  }
+  .service-box, .service-box-1 {
+      /* Use margin instead of flex-grow to control size */
+      margin: 10px; /* Add some space around boxes */
+  }
+  /* Adjust text sizes for readability */
+  .service-box p, .service-box-1 p {
+      font-size: 14px; /* Smaller font size for better readability */
+  }
+  .service-box h2, .service-box-1 h2 {
+      font-size: 18px; /* Adjust heading size */
+  }
+}
+
+@media (max-width: 480px) {
+  .container, .container-1 {
+      padding: 0 10px; /* Minimal padding for very small screens */
+  }
+  /* Further adjust icon sizes and text for very small screens */
+  .service-box img, .service-box-1 img {
+      width: 20px; /* Further reduce icon size */
+  }
+  .service-box h2, .service-box-1 h2 {
+      font-size: 16px; /* Further reduce heading size */
+  }
+  .service-box p, .service-box-1 p {
+      font-size: 13px; /* Smaller paragraph text */
+  }
+}
+
+/* Additional styles to ensure text is not cut off */
+.service-box, .service-box-1 {
+  overflow: visible; /* Ensure text is not clipped */
+  justify-content: center; /* Align children vertically */
+  align-items: center; /* Align children horizontally */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Ensure the hover effect does not hide text */
+.service-box:hover::before, .service-box-1:hover::before {
+  background-color: rgba(255, 255, 255, 0); /* Make hover background transparent */
+}
+
+/* ... [Any additional responsive styles as needed] ... */
+
+
+  @media (max-width: 480px) {
+    .feature-section h2 {
+        font-size: 24px;
+    }
+    .medical-info-list li:before {
+        font-size: 18px;
+    }
+    .medical-info-list {
+        font-size: 14px;
+    }
+    .feature-box p, .cardy p {
+        font-size: 14px;
+    }
+    .cardy h1 {
+        font-size: 20px;
+    }
+    .menu-panel {
+        padding: 60px 20px;
+    }
+    .menu-links a {
+        font-size: 0.8em;
+    }
+    .cardy img {
+      width: 50%;
+     
+  }
+  .custom-button {
+    font-size: 16px;
+    transform: translateY(-50%);
+    width: auto;
+    padding-top: 330px;
+    right: 100px;
+}
+}
+
+.service-box img, .service-box-1 img {
+  width: 30px; /* Adjust as needed */
+  margin-bottom: 0px;
+  margin-right: 10px; 
+}
+
+@media (max-width: 768px) {
+  .feature-section {
+      flex-direction: column;
+  }
+  .left-column, .right-column {
+      width: 100%;
+      padding: 20px 10px;
+  }
+  .feature-box {
+      margin-bottom: 20px;
+  }
+  .menu-panel, .menu-background {
+      width: 100%; /* Full width menu on smaller screens */
+  }
+  
+  .custom-button {
+      font-size: 16px;
+      top: 70%;
+      transform: translateY(-50%);
+      width: auto;
+      right: 100px;
+  }
+  .cardy img {
+    width: 50%;
+   
+}
+}
+
+
+@media (max-width: 1024px) {
+  .feature-section {
+      padding: 60px 20px;
+  }
+  .left-column, .right-column {
+      padding: 20px;
+  }
+  .right-column {
+      grid-template-columns: 1fr; /* Adjust grid for medium screens */
+  }
+  .cardy img {
+      margin-left: 0;
+      margin-right: 20px;
+  }
+  .buttony, .custom-button {
+      font-size: 14px;
+      padding: 8px 16px;
+      top: 120px;
+
+  }
+   .custom-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 120px;
+    transform: translateY(10%);
+    
+    
+}
+  .cardy {
+      flex-direction: column; /* Stack elements on smaller screens */
+      text-align: center;
+  }
+  .cardy h1, .cardy p, .buttony {
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .cardy img {
+      width: 50%;
+      padding-top: 50px;
+      padding-right: 150px;
+     
+  }
+  #logo img {
+      width: 50px; /* Smaller logo on smaller screens */
+  }
+}
   
   /* Center logo and header */
   #logo, header h1, p.disclaimer {
@@ -136,20 +300,6 @@ body {
     fill: #ffffff;
   }
 
-  
-  
-  /* Style for disclaimer */
-  p.disclaimer {
-    margin-top: 50px; /* Adjust this value as needed */
-  }
-  iframe {
-    margin-top: 50px; 
-    display: block;
-    margin: auto;
-    border: none;
-    border-radius: 10px; /* Set border radius for the iframe */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  }
   .feature-section {
     display: flex;
     align-items: flex-start;
@@ -506,40 +656,3 @@ body {
   color: white; /* Text color on hover */
 }
 
-
-
-.cardy-1 {
-  background-color: #333; /* Dark box background */
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-}
-.cardy-1:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.cardy-1 h1 {
-
-
-  margin-left:10px;
-  color: #4d9ef6;
-  font-size: 24px;
-}
-.cardy-1 p {
-  margin-right:60px;
-  font-size: 16px;
-  line-height: 1.6; /* Improves readability */
-  flex: 1;
-}
-.cardy-1 img {
-  width: 200px;
-  border-radius: 5px;
-  flex-shrink: 0;
-  margin-left: 70px;
-  margin-right: 170px;
-}
