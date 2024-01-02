@@ -38,8 +38,13 @@ JavaScript file for adding interactivity and functionality to the website.
 
 The chatbot on this website is implemented using the AutoGen framework. The code for the chatbot can be found in the `chatbot-autogen` folder. The chatbot interacts with users, provides information, and handles various tasks related to healthcare.
 
-## Local Development
 
+<img width="1440" alt="Screenshot 2024-01-02 at 7 19 56 PM" src="https://github.com/duuet-care/duuet.care/assets/98315116/3eaf0bf7-325e-4bcc-a2e8-8589b48e5997">
+<img width="1440" alt="Screenshot 2024-01-02 at 7 19 58 PM" src="https://github.com/duuet-care/duuet.care/assets/98315116/4326f64c-ba53-4dcf-b537-f03604101635">
+<img width="1440" alt="Screenshot 2024-01-02 at 7 20 05 PM" src="https://github.com/duuet-care/duuet.care/assets/98315116/244b64fa-b7b7-4367-adf9-e436d74716f6">
+<img width="1440" alt="Screenshot 2024-01-02 at 7 19 50 PM" src="https://github.com/duuet-care/duuet.care/assets/98315116/d5edfaeb-3b54-4049-bb3b-d62cc1ea6287">
+
+## Local Development
 If you want to run the website locally for development purposes, follow the steps below:
 
 1. Clone the repository:
